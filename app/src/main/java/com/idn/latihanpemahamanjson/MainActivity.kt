@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.idn.latihanpemahamanjson.databinding.ActivityMainBinding
-import com.idn.latihanpemahamanjson.ui.ListUserActivity
+import com.idn.latihanpemahamanjson.listuser.ListUserActivity
 import com.idn.latihanpemahamanjson.searchrepo.SearchRepoActivity
 import com.idn.latihanpemahamanjson.searchuser.SearchUserActivity
 

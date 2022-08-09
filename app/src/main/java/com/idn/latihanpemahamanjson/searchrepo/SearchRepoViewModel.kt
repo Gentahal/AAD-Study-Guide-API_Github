@@ -17,7 +17,7 @@ class SearchRepoViewModel : ViewModel() {
     private val listRepo = MutableLiveData<RepoResponse>()
 
     fun searchRepos(searchRepoString : String){
-        ApiConfig.getApiService().searchRepo("Adam Grup").enqueue(object :
+        ApiConfig.getApiService().searchRepo(searchRepoString).enqueue(object :
             Callback<RepoResponse> {
             override fun onResponse(call: Call<RepoResponse>, response: Response<RepoResponse>) {
                 listRepo.value = response.body()
