@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_json"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Display json button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_list_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Display Button list user"
+        app:layout_constraintTop_toBottomOf="@+id/btn_json" />
+
+    <Button
+        android:id="@+id/btn_search_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search User"
+        app:layout_constraintTop_toBottomOf="@+id/btn_list_user" />
+
+    <Button
+        android:id="@+id/btn_repo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buttom Repo"
+        app:layout_constraintTop_toBottomOf="@+id/btn_search_user" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
