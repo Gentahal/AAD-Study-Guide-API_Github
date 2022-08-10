@@ -7,19 +7,18 @@
     tools:context=".searchuser.SearchUserActivity">
 
     <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_search_user"
         android:layout_width="match_parent"
-        android:id="@+id/search"
         android:layout_height="wrap_content"
-        app:queryHint="Cari User"
-        android:background="@color/purple_200"
-        android:inputType="text"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:defaultQueryHint="Cari Disini"
+        app:iconifiedByDefault="false"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/search"
+        app:layout_constraintTop_toBottomOf="@id/sv_search_user"
         tools:listitem="@layout/row_item_user"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

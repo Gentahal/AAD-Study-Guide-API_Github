@@ -16,7 +16,7 @@ class UserAdapter(private val listUser: List<UsersItem>) : RecyclerView.Adapter<
         RowItemUserBinding.inflate(LayoutInflater.from(parent.context),parent,false)
     )
 
-    override fun onBindViewHolder(holder: UserAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = listUser [position]
         holder.binding.apply {
             tvNamaUser.text = data.login

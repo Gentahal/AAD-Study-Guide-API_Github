@@ -1,15 +1,13 @@
 package com.idn.latihanpemahamanjson.searchuser
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.idn.latihanpemahamanjson.R
 import com.idn.latihanpemahamanjson.UsersItem
-import com.idn.latihanpemahamanjson.UsersResponse
 import com.idn.latihanpemahamanjson.databinding.ActivitySearchUserBinding
 
 class SearchUserActivity : AppCompatActivity() {
@@ -25,10 +23,8 @@ class SearchUserActivity : AppCompatActivity() {
         _binding = ActivitySearchUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val searchViewString = "Genta"
-
         //inisialisasi ViewModel
-         _viewModel = ViewModelProvider(this)[SearchUserViewModel::class.java]
+        _viewModel = ViewModelProvider(this)[SearchUserViewModel::class.java]
         viewModel.getSearchUser().observe(this){
             Log.i("TAG", "onCreate: $it \n \n \n Nama Usernya ----> ${it.items?.get(0)?.login}")
             showDataUser(it.items)
@@ -47,7 +43,7 @@ class SearchUserActivity : AppCompatActivity() {
     }
 
     private fun searchUsers(){
-        binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        binding.svSearchUser.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 query?.let {
                     viewModel.searchUser(it)

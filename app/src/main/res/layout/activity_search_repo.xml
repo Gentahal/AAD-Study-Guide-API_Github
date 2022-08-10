@@ -3,7 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".searchrepo.SearchRepoActivity">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_search_repo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:defaultQueryHint="Cari Disini"
+        app:iconifiedByDefault="false"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_repo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/sv_search_repo"
+        tools:listitem="@layout/row_item_repo" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
