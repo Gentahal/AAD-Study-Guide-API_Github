@@ -39,6 +39,7 @@
         android:text="Genta Halilintar"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
@@ -54,6 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv_desc"
+        android:textColor="@color/black"
         android:text="A collection of samples to discuss and showcase different architectural tools and patterns for Android apps."
         app:layout_constraintTop_toBottomOf="@+id/tv_fullname_repo"
         app:layout_constraintStart_toStartOf="parent"

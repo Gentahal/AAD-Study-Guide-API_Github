@@ -1,9 +1,11 @@
-package com.idn.latihanpemahamanjson
+package com.idn.latihanpemahamanjson.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.idn.latihanpemahamanjson.hero.JsonActivity
+import com.idn.latihanpemahamanjson.R
 import com.idn.latihanpemahamanjson.databinding.ActivityMainBinding
 import com.idn.latihanpemahamanjson.listuser.ListUserActivity
 import com.idn.latihanpemahamanjson.searchrepo.SearchRepoActivity

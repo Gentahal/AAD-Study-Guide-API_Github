@@ -18,13 +18,13 @@
             android:name=".searchuser.SearchUserActivity"
             android:exported="false" />
         <activity
-            android:name=".JsonActivity"
+            android:name=".hero.JsonActivity"
             android:exported="false" />
         <activity
             android:name=".listuser.ListUserActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
