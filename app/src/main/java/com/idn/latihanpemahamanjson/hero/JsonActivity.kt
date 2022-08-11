@@ -3,7 +3,9 @@ package com.idn.latihanpemahamanjson.hero
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.idn.latihanpemahamanjson.data.Hero
 import com.idn.latihanpemahamanjson.databinding.ActivityJsonBinding
 import java.io.IOException
 
@@ -19,9 +21,25 @@ class JsonActivity : AppCompatActivity() {
         _binding = ActivityJsonBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.rvHero.apply {
-            layoutManager = LinearLayoutManager(this@JsonActivity)
-            adapter = HeroAdapter(this@JsonActivity)
+
+        binding.apply {
+            rvHero.layoutManager = LinearLayoutManager(this@JsonActivity)
+            rvHero.adapter = HeroAdapter(this@JsonActivity)
+
+            svHero.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    return false
+                }
+
+                override fun onQueryTextChange(newText: String?): Boolean {
+                    if (newText != null) {
+                        (rvHero.adapter as HeroAdapter).filter.filter(newText)
+                    }
+                    return true
+                }
+
+            })
+
         }
 
 //        getDataGson()
